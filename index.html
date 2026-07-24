@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCheck — Weather Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="app-header">
+      <h1>Sky<span>Check</span></h1>
+      <p class="tagline">Real-time weather, anywhere in the world</p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="recent-searches" class="recent-searches hidden"></div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Fetching weather data...</p>
+    </div>
+
+    <div id="error-box" class="error-box hidden">
+      <p id="error-message"></p>
+    </div>
+
+    <div id="weather-card" class="weather-card hidden">
+      <div class="weather-main">
+        <img id="weather-icon" src="" alt="Weather icon">
+        <p id="temp" class="temp"></p>
+      </div>
+      <h2 id="city-name"></h2>
+      <p id="local-time" class="local-time"></p>
+      <p id="description" class="description"></p>
+
+      <div class="details-grid">
+        <div class="detail">
+          <p class="detail-label">Feels Like</p>
+          <p id="feels-like" class="detail-value"></p>
+        </div>
+        <div class="detail">
+          <p class="detail-label">Humidity</p>
+          <p id="humidity" class="detail-value"></p>
+        </div>
+        <div class="detail">
+          <p class="detail-label">Wind Speed</p>
+          <p id="wind" class="detail-value"></p>
+        </div>
+        <div class="detail">
+          <p class="detail-label">Pressure</p>
+          <p id="pressure" class="detail-value"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
